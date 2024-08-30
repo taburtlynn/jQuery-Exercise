@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+    <link rel="stylesheet" href="movies.css">
+
+</head>
+<body>    
+
+    <h1 class="h1">Movies App!</h1>
+
+    <form class="form">
+
+        <input id="title" class="input" placeholder="Title">
+
+        <input id="rating" class="input" placeholder="Rating">
+
+    </form>
+
+
+    <button class="submit-form">Submit</button>
+    
+    <div id="myDiv" class="container">
+
+        <h3>Movie</h3> <h3>Rating</h3>
+
+
+
+    <ul id="list">
+        
+        
+
+    </ul>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+
+  
+
+        $(".submit-form").click(function(){
+
+            let title = $("#title").val();   
+
+            let rating = $("#rating").val();
+            
+            let movieAndRating = $("<li>"+title+"-"+rating+"</li>");
+
+            let removeBtn = $('<button class="remove"> Remove</button>');
+
+            removeBtn.on("click",function(){$(this).parent().remove();});
+
+            if (rating > 10){alert("rating is too high!");}
+
+            else if(rating <= 0){alert("rating is too low!");}
+
+            else if(title.length < 2){alert("title not long enough");}
+
+            else{
+                movieAndRating.append(removeBtn);
+                $("#list").append(movieAndRating);
+
+                $("ul li").addClass("items");
+         }
+
+        });
+
+
+$("body").css("background-color", "yellow");
+
+$("h1").css("font-size", "30px");
+
+$(".input").addClass("yellow");
+
+$(".submit-form").css("margin","20px");
+
+$("#list").css("list-style-type", "none");
+
+</script>
+
+
+    
+</body>
+</html>

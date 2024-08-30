@@ -1,0 +1,18 @@
+$( document ).ready(console.log("Let's get ready to party with JQuery!"))
+VM136:1 Let's get ready to party with JQuery!
+jQuery.fn.init {0: document, length: 1}
+
+$('article img').addClass('image-center')
+jQuery.fn.init {0: img.image-center, length: 1, prevObject: j…y.fn.init}
+
+$('p').last().remove()
+jQuery.fn.init {0: p, length: 1, prevObject: j…y.fn.init}
+
+$('h1').css('font-size', '75px')
+jQuery.fn.init {0: h1#title.text-center, length: 1, prevObject: j…y.fn.init}
+
+$("ol").append($("<li>", {text: "i love parker!"}))
+jQuery.fn.init {0: ol, length: 1, prevObject: j…y.fn.init}
+
+$('aside').empty().append($('<p>',{text: 'i am sorry'}))
+jQuery.fn.init {0: aside.col-sm-4, length: 1, prevObject: j…y.fn.init}
